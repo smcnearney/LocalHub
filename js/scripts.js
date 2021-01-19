@@ -106,3 +106,60 @@ eventsButton.addEventListener("click", function (event) {
     getEvents();
 });
 
+
+
+function getSports() {
+    const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=kPwc8hRP4lHymySkz8uZDaL5OUA2dXYh&classificationId=KZFzniwnSyZfZ7v7nE&geoPoint=${geohash}&radius=20`;
+    fetch(url)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        var eventList = json._embedded.events.map((individualEvent) => {
+            return `<div>
+                        <ul>
+                            <li><img src="${individualEvent.images[0].url}" /></li>  
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>
+                        </ul>
+                    </div>`;
+        });
+    document.getElementById("output").innerHTML = eventList;    
+    });
+};
+
+sportsButton.addEventListener("click", function (event) {
+    event.preventDefault(); //prevents submit action which would reload page
+    getSports();
+});
+
+
+
+function getMusic() {
+    const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=kPwc8hRP4lHymySkz8uZDaL5OUA2dXYh&classificationId=KZFzniwnSyZfZ7v7nJ&geoPoint=${geohash}&radius=20`;
+    fetch(url)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        var eventList = json._embedded.events.map((individualEvent) => {
+            return `<div>
+                        <ul>
+                            <li><img src="${individualEvent.images[0].url}" /></li>  
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>
+                        </ul>
+                    </div>`;
+        });
+    document.getElementById("output").innerHTML = eventList;    
+    });
+};
+
+musicButton.addEventListener("click", function (event) {
+    event.preventDefault(); //prevents submit action which would reload page
+    getMusic();
+});
