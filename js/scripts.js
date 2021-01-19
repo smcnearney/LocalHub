@@ -1,4 +1,5 @@
-// browser location starts when this function is called 
+'use strict';
+
 let geohash;
 
 function getLocation() { 
