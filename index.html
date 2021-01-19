@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script src="get.js"></script>
-<script src="scripts.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Local Feed</title>
+    </head>
+    <body background="images/atlanta.jpg">
+        <main id="wrapper">
+            <header>
+                <h1 class="site-title">Location-Based Events</h1>
+                <button id = "find-me">Get my location</button><br/>
+                    <p id = "status"></p>
+                    <a id = "map-link" target="_blank"></a>
+                <button type="submit" id="eventsButton">Events</button> 
+            </header>
+            <div id="output"></div>
+        </main>    
+    </body>
+<script src="js/scripts.js"></script>
 </html>
