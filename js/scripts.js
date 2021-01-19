@@ -79,6 +79,8 @@ locationButton.addEventListener("click", function (event) {
 });
 
 
+
+
 function getEvents() {
     const url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=kPwc8hRP4lHymySkz8uZDaL5OUA2dXYh&geoPoint=${geohash}&radius=20`;
     fetch(url)
@@ -89,7 +91,7 @@ function getEvents() {
         var eventList = json._embedded.events.map((individualEvent) => {
             return `<div>
                         <ul>
-                            <li><img src="${individualEvent.images[0].url}" /></li>  
+                            <li><img src="${individualEvent.images[1].url}" /></li>  
                             <li>Name: ${individualEvent.name}</li>
                             <li>Date: ${individualEvent.dates.start.localDate}</li>
                             <li>Time: ${individualEvent.dates.start.localTime}</li>
@@ -100,6 +102,7 @@ function getEvents() {
     document.getElementById("output").innerHTML = eventList;    
     });
 };
+
 
 eventsButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
@@ -118,7 +121,7 @@ function getSports() {
         var eventList = json._embedded.events.map((individualEvent) => {
             return `<div>
                         <ul>
-                            <li><img src="${individualEvent.images[0].url}" /></li>  
+                            <li><img src="${individualEvent.images[1].url}" /></li>  
                             <li>Name: ${individualEvent.name}</li>
                             <li>Date: ${individualEvent.dates.start.localDate}</li>
                             <li>Time: ${individualEvent.dates.start.localTime}</li>
@@ -147,7 +150,7 @@ function getMusic() {
         var eventList = json._embedded.events.map((individualEvent) => {
             return `<div>
                         <ul>
-                            <li><img src="${individualEvent.images[0].url}" /></li>  
+                            <li><img src="${individualEvent.images[1].url}" /></li>  
                             <li>Name: ${individualEvent.name}</li>
                             <li>Date: ${individualEvent.dates.start.localDate}</li>
                             <li>Time: ${individualEvent.dates.start.localTime}</li>
@@ -162,4 +165,64 @@ function getMusic() {
 musicButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
     getMusic();
+});
+
+
+
+
+function getArtsTheatre() {
+    const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=kPwc8hRP4lHymySkz8uZDaL5OUA2dXYh&classificationId=KZFzniwnSyZfZ7v7na&geoPoint=${geohash}&radius=20`;
+    fetch(url)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        var eventList = json._embedded.events.map((individualEvent) => {
+            return `<div>
+                        <ul>
+                            <li><img src="${individualEvent.images[1].url}" /></li>  
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>
+                        </ul>
+                    </div>`;
+        });
+    document.getElementById("output").innerHTML = eventList;    
+    });
+};
+
+artsTheatreButton.addEventListener("click", function (event) {
+    event.preventDefault(); //prevents submit action which would reload page
+    getArtsTheatre();
+});
+
+
+
+
+function getMiscellaneous() {
+    const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=kPwc8hRP4lHymySkz8uZDaL5OUA2dXYh&classificationId=KZFzniwnSyZfZ7v7n1&geoPoint=${geohash}&radius=20`;
+    fetch(url)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        var eventList = json._embedded.events.map((individualEvent) => {
+            return `<div>
+                        <ul>
+                            <li><img src="${individualEvent.images[1].url}" /></li>  
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>
+                        </ul>
+                    </div>`;
+        });
+    document.getElementById("output").innerHTML = eventList;    
+    });
+};
+
+miscellaneousButton.addEventListener("click", function (event) {
+    event.preventDefault(); //prevents submit action which would reload page
+    getMiscellaneous();
 });
