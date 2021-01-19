@@ -90,13 +90,13 @@ function getEvents() {
     })
     .then(function (json) {
         json._embedded.events.map((individualEvent) => {
-        const eventCard = document.createElement('ul class="eventUL"')
+        const eventCard = document.createElement('ul')
         const eventDetails = `                       
                             <li><img src="${individualEvent.images[1].url}" /></li>  
-                            <li class="nameLI">Name: ${individualEvent.name}</li>
-                            <li class="dateLI">Date: ${individualEvent.dates.start.localDate}</li>
-                            <li class="timeLI">Time: ${individualEvent.dates.start.localTime}</li>
-                            <li class="ticketsLI">Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
@@ -121,13 +121,13 @@ function getSports() {
     })
     .then(function (json) {
         json._embedded.events.map((individualEvent) => {
-        const eventCard = document.createElement('ul class="eventUL"')
+        const eventCard = document.createElement('ul')
         const eventDetails = `                       
                             <li><img src="${individualEvent.images[1].url}" /></li>  
-                            <li class="nameLI">Name: ${individualEvent.name}</li>
-                            <li class="dateLI">Date: ${individualEvent.dates.start.localDate}</li>
-                            <li class="timeLI">Time: ${individualEvent.dates.start.localTime}</li>
-                            <li class="ticketsLI">Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
@@ -151,13 +151,13 @@ function getMusic() {
     })
     .then(function (json) {
         json._embedded.events.map((individualEvent) => {
-        const eventCard = document.createElement('ul class="eventUL"')
+        const eventCard = document.createElement('ul')
         const eventDetails = `                       
                             <li><img src="${individualEvent.images[1].url}" /></li>  
-                            <li class="nameLI">Name: ${individualEvent.name}</li>
-                            <li class="dateLI">Date: ${individualEvent.dates.start.localDate}</li>
-                            <li class="timeLI">Time: ${individualEvent.dates.start.localTime}</li>
-                            <li class="ticketsLI">Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
@@ -182,13 +182,13 @@ function getArtsTheatre() {
     })
     .then(function (json) {
         json._embedded.events.map((individualEvent) => {
-        const eventCard = document.createElement('ul class="eventUL"')
+        const eventCard = document.createElement('ul')
         const eventDetails = `                       
                             <li><img src="${individualEvent.images[1].url}" /></li>  
-                            <li class="nameLI">Name: ${individualEvent.name}</li>
-                            <li class="dateLI">Date: ${individualEvent.dates.start.localDate}</li>
-                            <li class="timeLI">Time: ${individualEvent.dates.start.localTime}</li>
-                            <li class="ticketsLI">Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
@@ -213,13 +213,13 @@ function getMiscellaneous() {
     })
     .then(function (json) {
         json._embedded.events.map((individualEvent) => {
-        const eventCard = document.createElement('ul class="eventUL"')
+        const eventCard = document.createElement('ul')
         const eventDetails = `                       
                             <li><img src="${individualEvent.images[1].url}" /></li>  
-                            <li class="nameLI">Name: ${individualEvent.name}</li>
-                            <li class="dateLI">Date: ${individualEvent.dates.start.localDate}</li>
-                            <li class="timeLI">Time: ${individualEvent.dates.start.localTime}</li>
-                            <li class="ticketsLI">Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
+                            <li>Name: ${individualEvent.name}</li>
+                            <li>Date: ${individualEvent.dates.start.localDate}</li>
+                            <li>Time: ${individualEvent.dates.start.localTime}</li>
+                            <li>Tickets: <a href="${individualEvent.url}">Click Here</a></li>`;
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
