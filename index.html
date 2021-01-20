@@ -6,22 +6,24 @@
         <link rel="stylesheet" href="css/style.css">
         <title>Local Feed</title>
     </head>
-    <body background="images/atlanta.jpg">
-        <main>
+    <body>
+        <main>    
             <header>
                 <h1 class="site-title">Location-Based Events</h1>
-                <button type="submit" id= "locationButton">Get my location</button><br/>
+                <button type="submit" id="locationButton">Get my location</button><br/>
                     <p id = "status"></p>
                     <a id = "map-link" target="_blank"></a>
-                <div id="hiddebButtons">
-                    <button type="submit" id="eventsButton">Events</button> 
-                    <button type="submit" id="musicButton">Music</button>
-                    <button type="submit" id="sportsButton">Sports</button>
-                    <button type="submit" id="artsTheatreButton">Arts & Theatre</button>
-                    <button type="submit" id="miscellaneousButton">Miscellaneous</button>
-                </div>
+            <div class="all-buttons">
+                <ul>
+                    <li><button type='submit' id='eventsButton'>Events</button></li>
+                    <li><button type='submit' id='musicButton'>Music</button></li>
+                    <li><button type='submit' id='sportsButton'>Sports</button></li>
+                    <li><button type='submit' id='artsTheatreButton'>Arts & Theatre</button></li>
+                    <li><button type='submit' id='miscellaneousButton'>Miscellaneous</button></li>
+                </ul>
+            </div>
             </header>
-            <div id="output"></div>
+            <div id="output" class="output"></div>
         </main>    
     </body>
 <script src="js/scripts.js"></script>
