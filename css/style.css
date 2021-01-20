@@ -1,3 +1,4 @@
+
 ul {
     list-style-type: none;
 }
@@ -11,20 +12,80 @@ img {
 html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 24px;
+    font-size: 16px;
     box-sizing: border-box;
     color: white;
-  }
+    background-image: url(“../../images/atlanta.jpg”);
+    /* background-image: url(“../images/atlanta.jpg”);
+    background-repeat: no-repeat; */
+    height: 100%;
+}
+
+body {
+    background-color: #333333;
+}
   
-  *,
-  *::before,
-  *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
-  }
+}
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 320px;    
+}
 
-  .event-card ul {
-    background: white;
+.all-buttons ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items: flex-end;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.all-buttons li {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.all-buttons li button {
+        width: 100%;
+        max-width: 640px;
+        overflow: auto;
+}
+
+button {
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    font-size: 24px;
+    background-color:#c2c2d6;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #9494B8;
+}
+
+.output ul {
     width: 100%;
     max-width: 640px;
     margin-left: 0;
@@ -33,71 +94,71 @@ html {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 0px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    background-color: navy;
+    margin-bottom: 25px;
+    font-family:
   }
 
-  .event-card li:nth-child(2) {
+.output img {
+    width: 100%;
+    max-width: 640px;
+    padding: 4px;
+    border: 5px solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+}
+
+.output li {
+    padding: 3px 0 3px 6px;
+}
+.output li:nth-child(2) {
     font-weight: bold;
+    font-family: fantasy
     font-size: 16px;
-    color: #333;
-  }
-
-  .event-card li:nth-child(3) {
+    color: whitesmoke;
+}
+.output li:nth-child(3) {
     font-size: 12px;
-    color: #333;
-
+    color: whitesmoke;
 }
-
-.event-card li:nth-child(4) {
+.output li:nth-child(4) {
     font-size: 10px;
-    color: #333;
-
+    color: whitesmoke;
 }
-
-.event-card li:nth-child(5) {
+.output li:nth-child(5) {
     font-size: 14px;
-    color: #333;
-
+    color: whitesmoke;
 }
-
-.event-card li:nth-child(5) a {
+.output li:nth-child(5) a {
     font-size: 14px;
-    color: #17293c;
+    color: rgb(43, 107, 226);
     text-decoration: none;
 }
-
-.event-card li:nth-child(5) a:hover {
+.output li:nth-child(5) a:hover {
     font-size: 14px;
-    color: #002ead;
+    color: whitesmoke;
     text-decoration: none;
 }
-
-
-main {
-    display: flexbox;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: center;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 320px;
-    
-}
-
-
-
-  button {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    font-size: 28px;
-  }
   
 
- 
-  
+
+
+/* .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  } */
+
+
 
   /* .image-list {
     list-style-type: none;
@@ -179,4 +240,52 @@ main {
   position: absolute;
   top: 8px;
   right: 8px;
+} */
+
+/* .event-card ul {
+    background: white;
+    width: 100%;
+    max-width: 640px;
+    margin-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+  }
+
+.event-card li:nth-child(2) {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+
+.event-card li:nth-child(3) {
+    font-size: 12px;
+    color: #333;
+
+}
+
+.event-card li:nth-child(4) {
+    font-size: 10px;
+    color: #333;
+
+}
+
+.event-card li:nth-child(5) {
+    font-size: 14px;
+    color: #333;
+
+}
+
+.event-card li:nth-child(5) a {
+    font-size: 14px;
+    color: #17293c;
+    text-decoration: none;
+}
+
+.event-card li:nth-child(5) a:hover {
+    font-size: 14px;
+    color: #002ead;
+    text-decoration: none;
 } */

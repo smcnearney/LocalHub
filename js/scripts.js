@@ -2,6 +2,7 @@
 
 let geohash;
 
+
 function getLocation() { 
 
     // check to make sure geolocation is possible
@@ -61,17 +62,18 @@ function getLocation() {
         } 
         else {
             console.log("server error");
+            window.alert("Unable to get your location. Please make sure your browser's location setting is enabled.")
         }
     };
     
     request.onerror = function() {
       // There was a connection error of some sort
       console.log("unable to connect to server");
+      window.alert("Unable to get your location. Please make sure your browser's location setting is enabled.")
     };
     
     request.send();  // make the request
-  
-}
+};
 
 locationButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
@@ -102,12 +104,15 @@ function getEvents() {
         });
     document.getElementById("output").append(events);  
     });
+
 };
+
 
 eventsButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
     getEvents();
 });
+
 
 
 
@@ -134,7 +139,6 @@ function getSports() {
     document.getElementById("output").append(events);  
     });
 };
-
 sportsButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
     getSports();
@@ -164,11 +168,11 @@ function getMusic() {
     document.getElementById("output").append(events);  
     });
 };
-
 musicButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
     getMusic();
 });
+
 
 
 
@@ -195,7 +199,6 @@ function getArtsTheatre() {
     document.getElementById("output").append(events);  
     });
 };
-
 artsTheatreButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
     getArtsTheatre();
@@ -223,10 +226,9 @@ function getMiscellaneous() {
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
-    document.getElementById("output").append(events);  
+    document.getElementById("output").prepend(events);  
     });
 };
-
 miscellaneousButton.addEventListener("click", function (event) {
     event.preventDefault(); //prevents submit action which would reload page
     getMiscellaneous();
