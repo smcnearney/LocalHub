@@ -10,45 +10,82 @@ img {
 
 
 html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
-    color: white;
-    background-image: url(“../../images/atlanta.jpg”);
-    /* background-image: url(“../images/atlanta.jpg”);
-    background-repeat: no-repeat; */
-    height: 100%;
+  /* background-image: url(../images/AllEventsBG_640x1080.jpg); */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
-    background-color: #333333;
+  background-image: url(../images/AllEventsBG_640x1080.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
-  
+ 
+
+.modal-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  margin: 0;
+  margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/MiscellaneousBG_640x1080.jpg);
+  height: 100vh;
+  width: 100vh;
+  margin: 0;
+}
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: center;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 320px;    
-}
-
-.all-buttons ul{
+.all-buttons ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    align-items: flex-end;
+    align-items: center;
     text-align: center;
+    width: 100%;
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0px;
@@ -59,6 +96,7 @@ main {
 .all-buttons li {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style-type: none;
     width: 100%;
     margin-bottom: 35px;
@@ -66,11 +104,29 @@ main {
 
 .all-buttons li button {
         width: 100%;
-        max-width: 640px;
+        max-width: 240px;
         overflow: auto;
 }
 
 button {
+  display: inline-block;
+  background: #4285f4;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
+
+/* button {
     padding-top: 18px;
     padding-right: 18px;
     padding-bottom: 18px;
@@ -83,80 +139,176 @@ button {
 
 button:hover{
     background-color: #9494B8;
+} */
+
+
+.output {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 640px;   
+  overflow: auto; 
 }
 
 .output ul {
-    width: 100%;
+    width: 96%;
     max-width: 640px;
-    margin-left: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin: auto;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     padding-inline-start: 0px;
-    padding: 10px 10px 10px 10px;
+    /* padding: 10px 10px 10px 10px; */
     border-radius: 20px;
-    background-color: navy;
-    margin-bottom: 25px;
-    font-family:
-  }
+    background-color: whitesmoke;
+    margin-bottom: 45px;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
 
 .output img {
     width: 100%;
     max-width: 640px;
-    padding: 4px;
-    border: 5px solid;
-    border-radius: 20px;
-    box-shadow: 5px 5px;
+    /* border-radius: 20px; */
 }
 
 .output li {
-    padding: 3px 0 3px 6px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
+
+
+
 .output li:nth-child(2) {
+    margin-top: 10px;
     font-weight: bold;
-    font-family: fantasy
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
-    color: whitesmoke;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
 }
 .output li:nth-child(3) {
     font-size: 12px;
-    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 .output li:nth-child(4) {
     font-size: 10px;
-    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    text-transform: uppercase;
 }
 .output li:nth-child(5) {
     font-size: 14px;
-    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    text-transform: uppercase;
 }
 .output li:nth-child(5) a {
     font-size: 14px;
+    font-family: 'Lato', sans-serif;
     color: rgb(43, 107, 226);
+    text-transform: uppercase;
     text-decoration: none;
 }
 .output li:nth-child(5) a:hover {
     font-size: 14px;
-    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    color: rgb(43, 107, 226);
+    text-transform: uppercase;
     text-decoration: none;
 }
-  
+
+@media (min-width: 640px){
+
+  .modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    margin: 0;
+  }
+
+
+  body {
+    background-image: url(../images/AllEventsBG_1920x1080.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+   
+
+
+.output {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 320px;   
+    overflow: auto; 
+}
+
+.output ul {
+    width: 96%;
+    max-width: 320px;
+    margin: auto;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-start: 0px;
+    /* padding: 10px 10px 10px 10px; */
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin-bottom: 45px;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+ 
+
+.output img {
+  width: 100%;
+  max-width: 320px;
+}
+
+
+}
 
 
 
-/* .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-  } */
+
+/* main {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 320px;    
+} */
 
 
 
@@ -189,21 +341,6 @@ button:hover{
 
 .hidden {
   display: none;
-}
-
-.overlay {
-  background-color: rgba(0,0,0,0.5);
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-}
-
-.overlay.visible {
-  display: flex;
 }
 
 .modal {
