@@ -113,7 +113,7 @@ function getEvents() {
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
-    document.getElementById("output").append(events);  
+    document.getElementById("output").prepend(events);  
     });
 
 };
@@ -145,7 +145,7 @@ function getSports() {
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
-    document.getElementById("output").append(events);  
+    document.getElementById("output").prepend(events);  
     });
 };
 sportsButton.addEventListener("click", function (event) {
@@ -172,7 +172,7 @@ function getMusic() {
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
-    document.getElementById("output").append(events);  
+    document.getElementById("output").prepend(events);  
     });
 };
 musicButton.addEventListener("click", function (event) {
@@ -201,7 +201,7 @@ function getArtsTheatre() {
         eventCard.innerHTML = eventDetails;
         events.appendChild(eventCard);
         });
-    document.getElementById("output").append(events);  
+    document.getElementById("output").prepend(events);  
     });
 };
 artsTheatreButton.addEventListener("click", function (event) {
