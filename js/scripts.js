@@ -87,11 +87,6 @@ locationButton.addEventListener("click", function (event) {
      });
 });
 
-function toggleModal() {
-    const modalOverlay = document.querySelector("#overlay");
-    modalOverlay.classList.toggle("visible");
-}
-
 
 
 
