@@ -8,6 +8,13 @@ img {
     max-width: 640px;
 }
 
+h1 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 
 html {
   /* background-image: url(../images/AllEventsBG_640x1080.jpg); */
@@ -39,10 +46,10 @@ body {
 .modal {
   margin: 0;
   margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 
 .modal-body {
